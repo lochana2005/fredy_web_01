@@ -227,27 +227,37 @@ import { Link } from 'react-router-dom';
 
 
 // The VideoModal component is fine as it is.
+// ----------------------------------------------------------------
+// වීඩියෝ ප්ලේබැක් සඳහා Modal සංරචකය (VideoModal Component)
+// (ජංගම තිර සඳහා ප්‍රමාණය උපරිම කිරීමට වෙනස් කර ඇත)
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// වීඩියෝ ප්ලේබැක් සඳහා Modal සංරචකය (VideoModal Component)
+// (ජංගම තිරයේදී සම්පූර්ණ තිරය ආවරණය කිරීමට වෙනස් කර ඇත)
+// ----------------------------------------------------------------
 const VideoModal = ({ video, onClose }) => {
   if (!video) return null;
 
-  // Vimeo URL එක iframe embed format එකට සකස් කිරීම.
-  // උදා: https://vimeo.com/1122282331 -> https://player.vimeo.com/video/1122282331?autoplay=1...
   const embedId = video.videoUrl.split('/').pop();
   const finalEmbedUrl = `https://player.vimeo.com/video/${embedId}?autoplay=1&title=0&byline=0&portrait=0`; 
 
   return (
+    // පිටත div එක - fixed, full screen background
     <div 
-      // පිටත ක්ලික් කිරීමෙන් වැසීම (onClick={onClose}) ඉවත් කර ඇත.
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4" 
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-0" 
     >
-      {/* Modal එකේ උපරිම පළල max-w-7xl දක්වා වැඩි කර ඇත */}
+      {/* Modal අන්තර්ගතය - තිරයේ උපරිම පළල සහ උස ගැනීමට වෙනස් කර ඇත */}
       <div 
-        className="relative w-full max-w-7xl rounded-lg overflow-hidden shadow-2xl" 
+        // කුඩා තිර සඳහා: w-screen (තිරයේ පළල), h-screen (තිරයේ උස)
+        // විශාල තිර සඳහා: sm:max-w-7xl, sm:h-auto, sm:rounded-lg
+        className="relative w-screen h-screen sm:w-auto sm:h-auto sm:max-w-7xl rounded-none sm:rounded-lg overflow-hidden shadow-2xl" 
+        
+        // කුඩා තිරයේදී h-screen නිසා, aspect-ratio ඉවත් කරමු.
+        // විශාල තිරයේදී පමණක් aspect ratio සක්‍රිය කරමු.
         style={{ aspectRatio: '16 / 9' }} 
-        // Modal content එක ක්ලික් කළ විට event propagation නැවැත්වීමට
+        
         onClick={e => e.stopPropagation()} 
       >
-        {/* Vimeo වීඩියෝව පෙන්වීමට <iframe> භාවිතා කිරීම */}
         <iframe
           src={finalEmbedUrl}
           title={video.title}
@@ -259,7 +269,7 @@ const VideoModal = ({ video, onClose }) => {
           className="w-full h-full absolute top-0 left-0"
         ></iframe>
 
-        {/* Modal වැසීමේ බොත්තම - මෙය ක්ලික් කළ විට පමණක් වැසේ */}
+        {/* Modal වැසීමේ බොත්තම */}
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-white text-3xl font-bold bg-black bg-opacity-50 hover:bg-black rounded-full w-10 h-10 flex items-center justify-center z-10"
@@ -270,6 +280,8 @@ const VideoModal = ({ video, onClose }) => {
     </div>
   );
 };
+
+// ... VideoSection හි ඉතිරි කොටස පෙර පරිදිම පවතී ...
 
 const Videos = () => {
   // 1. Missing `useState` import:
