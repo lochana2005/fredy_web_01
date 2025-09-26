@@ -242,20 +242,14 @@ const VideoModal = ({ video, onClose }) => {
   const finalEmbedUrl = `https://player.vimeo.com/video/${embedId}?autoplay=1&title=0&byline=0&portrait=0`; 
 
   return (
-    // පිටත div එක - fixed, full screen background
+    // පිටත div (Background Overlay):
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-0" 
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 w-screen h-screen p-0 sm:p-4" 
     >
-      {/* Modal අන්තර්ගතය - තිරයේ උපරිම පළල සහ උස ගැනීමට වෙනස් කර ඇත */}
+      {/* Modal Content Div:  */}
       <div 
-        // කුඩා තිර සඳහා: w-screen (තිරයේ පළල), h-screen (තිරයේ උස)
-        // විශාල තිර සඳහා: sm:max-w-7xl, sm:h-auto, sm:rounded-lg
-        className="relative w-screen h-screen sm:w-auto sm:h-auto sm:max-w-7xl rounded-none sm:rounded-lg overflow-hidden shadow-2xl" 
-        
-        // කුඩා තිරයේදී h-screen නිසා, aspect-ratio ඉවත් කරමු.
-        // විශාල තිරයේදී පමණක් aspect ratio සක්‍රිය කරමු.
+        className="relative w-full h-full sm:h-auto max-w-none sm:max-w-7xl rounded-none sm:rounded-lg overflow-hidden shadow-2xl" 
         style={{ aspectRatio: '16 / 9' }} 
-        
         onClick={e => e.stopPropagation()} 
       >
         <iframe
@@ -265,14 +259,15 @@ const VideoModal = ({ video, onClose }) => {
           height="100%"
           frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
-          allowFullScreen
-          className="w-full h-full absolute top-0 left-0"
+          // වීඩියෝ iframe එකේ z-index එක z-0 ලෙස තබා ගන්න (default)
+          className="w-full h-full absolute top-0 left-0" 
         ></iframe>
 
-        {/* Modal වැසීමේ බොත්තම */}
+        {/* Modal වැසීමේ බොත්තම: z-index 50 සිට z-[100] දක්වා වැඩි කර, 
+            pointer-events-auto යෙදීමෙන්, එය ක්ලික් කිරීමට හැකි බව සහතික කරයි. */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-white text-3xl font-bold bg-black bg-opacity-50 hover:bg-black rounded-full w-10 h-10 flex items-center justify-center z-10"
+          className="absolute top-4 right-4 text-white text-3xl font-bold bg-black bg-opacity-50 hover:bg-black rounded-full w-10 h-10 flex items-center justify-center z-[100] pointer-events-auto"
         >
           &times;
         </button>
@@ -280,6 +275,7 @@ const VideoModal = ({ video, onClose }) => {
     </div>
   );
 };
+
 
 // ... VideoSection හි ඉතිරි කොටස පෙර පරිදිම පවතී ...
 
