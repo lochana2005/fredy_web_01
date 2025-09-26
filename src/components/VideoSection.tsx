@@ -345,10 +345,13 @@ import { Button } from '@/components/ui/button';
 // React Router
 import { Link } from 'react-router-dom';
 
-// ----------------------------------------------------------------
-// වීඩියෝ ප්ලේබැක් සඳහා Modal සංරචකය (VideoModal Component)
-// (සියලු තිර සඳහා Full/Max Size සහ නිවැරදිව ක්‍රියා කරන Close බොත්තම සහිතයි)
-// ----------------------------------------------------------------
+
+import v1 from '@/assets/video/tumbli/1.jpg';
+import v2 from '@/assets/video/tumbli/2.jpg';
+import v3 from '@/assets/video/tumbli/3.jpg';
+import v4 from '@/assets/video/tumbli/4.jpg';
+
+
 const VideoModal = ({ video, onClose }) => {
   if (!video) return null;
 
@@ -403,7 +406,7 @@ const VideoSection = () => {
       subtitle: 'Sehen Sie, wie professionell Parkett verlegt wird',
       category: 'Parkett',
       duration: '3:10',
-      thumbnail: 'https://placehold.co/600x400/000000/FFFFFF?text=Video+1+Thumbnail',
+      thumbnail: v1,
       videoUrl: 'https://vimeo.com/1122282331', 
     },
     {
@@ -411,7 +414,7 @@ const VideoSection = () => {
       subtitle: 'Moderne Techniken für Vinyl-Verlegung',
       category: 'Vinyl',
       duration: '0:21',
-      thumbnail: 'https://placehold.co/600x400/000000/FFFFFF?text=Video+2+Thumbnail',
+      thumbnail: v2,
       videoUrl: 'https://vimeo.com/1122284997',
     },
     {
@@ -419,7 +422,7 @@ const VideoSection = () => {
       subtitle: 'Präzise Arbeit mit Stein- und Keramikplatten',
       category: 'Keramik',
       duration: '1:33',
-      thumbnail: 'https://placehold.co/600x400/000000/FFFFFF?text=Video+3+Thumbnail',
+      thumbnail: v3,
       videoUrl: 'https://vimeo.com/1122285770',
     },
     {
@@ -427,7 +430,7 @@ const VideoSection = () => {
       subtitle: 'Professionelle Teppichverlegung für Geschäftsräume',
       category: 'Teppich',
       duration: '0.32',
-      thumbnail: 'https://placehold.co/600x400/000000/FFFFFF?text=Video+4+Thumbnail',
+      thumbnail: v4,
       videoUrl: 'https://vimeo.com/1122287917', 
     },
   ];
