@@ -380,7 +380,7 @@ const Videos = () => {
       <Navigation />
 
       <main className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">]
           <div className="flex items-center gap-4 mb-8">
             <Link to="/">
               <Button variant="outline" size="sm" className="gap-2">
