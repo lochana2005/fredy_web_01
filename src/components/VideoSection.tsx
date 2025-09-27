@@ -394,9 +394,7 @@ const VideoModal = ({ video, onClose }) => {
 };
 
 
-// ----------------------------------------------------------------
-// වීඩියෝ කොටසෙහි ප්‍රධාන සංරචකය (VideoSection Component)
-// ----------------------------------------------------------------
+
 const VideoSection = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
@@ -489,10 +487,10 @@ const VideoSection = () => {
                     </span>
                   </div>
                 </div>
-                <CardContent className="p-4">
+                {/* <CardContent className="p-4">
                   <h3 className="font-semibold text-primary mb-2">{video.title}</h3>
                   <p className="text-sm text-muted-foreground">{video.subtitle}</p>
-                </CardContent>
+                </CardContent> */}
               </Card>
             ))}
           </div>

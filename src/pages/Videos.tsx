@@ -431,10 +431,10 @@ const Videos = () => {
                     </span>
                   </div>
                 </div>
-                <CardContent className="p-4">
+                {/* <CardContent className="p-4">
                   <h3 className="font-semibold text-primary mb-2 text-sm">{video.title}</h3>
                   <p className="text-xs text-muted-foreground">{video.subtitle}</p>
-                </CardContent>
+                </CardContent> */}
               </Card>
             ))}
           </div>

@@ -29,21 +29,21 @@ const InstagramEmbed: React.FC<InstagramEmbedProps> = ({ url }) => {
     }
   }, [url]);
 
-  // Sanitize URL (remove trailing quotes/spaces)
+  
   const permalink = url.replace(/"+$/g, '').trim();
 
   return (
     <section id="instagram" className="py-16 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-primary">Instagram Reel</h2>
-          <p className="text-muted-foreground">Direkt von unserem Instagram</p>
+          {/* <h2 className="text-3xl font-bold text-primary">Instagram Reel</h2>
+          <p className="text-muted-foreground">Direkt von unserem Instagram</p> */}
         </div>
         <div className="max-w-2xl mx-auto">
           <blockquote
             className="instagram-media"
             data-instgrm-permalink={permalink}
-            data-instgrm-version="14"
+            data-instgrm-version="15"
           >
             <a href={permalink} target="_blank" rel="noopener noreferrer">
               Auf Instagram ansehen
