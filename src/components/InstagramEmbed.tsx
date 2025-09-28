@@ -29,11 +29,10 @@ const InstagramEmbed: React.FC<InstagramEmbedProps> = ({ url }) => {
     }
   }, [url]);
 
-  
   const permalink = url.replace(/"+$/g, '').trim();
 
   return (
-    <section id="instagram" className="py-16 bg-muted/50">
+    <section id="instagram" className="py-16 bg-white"> {/* Changed from bg-muted/50 to bg-white */}
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           {/* <h2 className="text-3xl font-bold text-primary">Instagram Reel</h2>
