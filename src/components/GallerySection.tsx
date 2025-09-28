@@ -189,6 +189,8 @@ const parkettMusterImages = [
 
 ];
 
+
+
 const beforeAfterImages = [
     import('@/assets/gallery/Before _After/1.jpg'),
     import('@/assets/gallery/Before _After/2.jpg'),
