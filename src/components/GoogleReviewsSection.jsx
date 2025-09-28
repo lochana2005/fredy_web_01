@@ -29,41 +29,6 @@ const googleReviews = [
     review: "Herr Fredy hat hervorragende Arbeit geleistet. Er war pünktlich, sehr sauber und das Parkett sieht fantastisch aus. Absolut empfehlenswert!",
     date: "vor 2 Wochen"
   },
-  {
-    id: 2,
-    name: "B. Schneider",
-    rating: 5,
-    review: "Professionelle Beratung und tadellose Ausführung der Bodenbeläge in unserer gesamten Wohnung. Die Kommunikation war stets freundlich und unkompliziert.",
-    date: "vor 1 Monat"
-  },
-  {
-    id: 3,
-    name: "Luca F.",
-    rating: 5,
-    review: "Schnell, effizient und qualitativ sehr hochwertig. Auch kleine Zusatzwünsche wurden ohne Probleme umgesetzt. Fünf Sterne sind verdient!",
-    date: "vor 3 Monaten"
-  },
-  {
-    id: 4,
-    name: "Sabrina T.",
-    rating: 5,
-    review: "Wir sind begeistert von unserem neuen Vinylboden. Fredy ist ein echter Experte, der sein Handwerk versteht. Vielen Dank für die tolle Arbeit!",
-    date: "vor 4 Monaten"
-  },
-  {
-    id: 5,
-    name: "Thomas W.",
-    rating: 4,
-    review: "Gute Arbeit, der Teppich ist perfekt verlegt. Kleinere Verzögerung beim Start, aber das Ergebnis zählt. Gerne wieder.",
-    date: "vor 5 Monaten"
-  },
-  {
-    id: 6,
-    name: "Laura K.",
-    rating: 5,
-    review: "Top! Die Fliesen in der Küche sehen super aus. Fredy war sehr gewissenhaft und hat auf alle Details geachtet. Sehr zufrieden!",
-    date: "vor 6 Monaten"
-  },
 ];
 
 
@@ -71,9 +36,9 @@ const googleReviews = [
 
 const GoogleReviewsSection = () => {
   return (
-    <div className="mt-20">
+    <div className="mt-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <h3 className="text-3xl font-bold mb-8 text-center text-primary">Kundenstimmen & Google Bewertungen</h3>
-      <p className="text-lg mb-10 text-center max-w-3xl mx-auto text-gray-700">
+      <p className="text-lg mb-10 text-center text-gray-700">
         Hören Sie, was unsere zufriedenen Kunden über Fredy und sein Team sagen – **Qualität, die überzeugt**.
       </p>
 
