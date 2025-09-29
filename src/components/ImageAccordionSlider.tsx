@@ -38,8 +38,8 @@ const ImageAccordionSlider = () => {
 
         // Auto-slide logic (only runs if isUserActive is false)
         const interval = setInterval(() => {
-            setActiveIndex(prevIndex => 
-                (prevIndex % galleryImages.length) + 1 
+            setActiveIndex(prevIndex =>
+                (prevIndex % galleryImages.length) + 1
             );
         }, 4000); // Auto-slide every 4 seconds
 
@@ -53,12 +53,11 @@ const ImageAccordionSlider = () => {
     };
 
     return (
-        
+
         <div className="accordion-slider-container ">
-            
 
             {galleryImages.map(image => (
-                <div 
+                <div
                     key={image.id}
                     className={`slider-panel ${activeIndex === image.id ? 'active' : ''}`}
                     onClick={() => handlePanelClick(image.id)}

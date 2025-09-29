@@ -288,7 +288,7 @@ const Videos = () => {
      {
       title: 'Parkettverlegung Schritt für Schritt',
       subtitle: 'Sehen Sie, wie professionell Parkett verlegt wird',
-      category: 'Parkett',
+      category: 'Parkett (Fiscgrad)',
       duration: '03:10',
       thumbnail: v1,
       videoUrl: 'https://vimeo.com/1122282331', 
@@ -296,7 +296,7 @@ const Videos = () => {
     {
       title: 'Vinyl Bodenbelag Installation',
       subtitle: 'Moderne Techniken für Vinyl-Verlegung',
-      category: 'Vinyl',
+      category: 'Parkett',
       duration: '00:21',
       thumbnail: v2,
       videoUrl: 'https://vimeo.com/1122284997',
@@ -304,7 +304,7 @@ const Videos = () => {
     {
       title: 'Keramikplatten Verlegung',
       subtitle: 'Präzise Arbeit mit Stein- und Keramikplatten',
-      category: 'Keramik',
+      category: 'Parkett',
       duration: '01:33',
       thumbnail: v3,
       videoUrl: 'https://vimeo.com/1122285770',
@@ -312,7 +312,7 @@ const Videos = () => {
     {
       title: 'Teppichverlegung im Büro',
       subtitle: 'Professionelle Teppichverlegung für Geschäftsräume',
-      category: 'Teppich',
+      category: 'Parkett',
       duration: '00.32',
       thumbnail: v4,
       videoUrl: 'https://vimeo.com/1122287917', 
@@ -320,7 +320,7 @@ const Videos = () => {
     {
       title: 'Laminat Installation Tipps',
       subtitle: 'Professionelle Techniken für perfekte Laminatverlegung',
-      category: 'Laminat',
+      category: 'Parkett',
       duration: '00:08',
       thumbnail: v5,
       videoUrl: 'https://vimeo.com/1122292874',
@@ -328,7 +328,7 @@ const Videos = () => {
     {
       title: 'Kork Bodenbelag Montage',
       subtitle: 'Nachhaltige Lösungen mit natürlichem Kork',
-      category: 'Kork',
+      category: 'Vinyl',
       duration: '02:31',
       thumbnail: v6,
       videoUrl: 'https://vimeo.com/1122292938',
@@ -336,7 +336,7 @@ const Videos = () => {
     {
       title: 'Linoleum Verarbeitung',
       subtitle: 'Hochwertige Linoleum-Installation von A bis Z',
-      category: 'Linoleum',
+      category: 'Vinyl',
       duration: '02:11',
       thumbnail: v7,
       videoUrl: 'https://vimeo.com/1122293348',
@@ -344,7 +344,7 @@ const Videos = () => {
     {
       title: 'Abdichtungsarbeiten',
       subtitle: 'Professionelle Silikon- und Abdichtungstechniken',
-      category: 'Abdichtung',
+      category: 'PVC ()',
       duration: '00:11',
       thumbnail: v8,
       videoUrl: 'https://vimeo.com/1122294187',

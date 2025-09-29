@@ -402,7 +402,7 @@ const VideoSection = () => {
     {
       title: 'Parkettverlegung Schritt für Schritt',
       subtitle: 'Sehen Sie, wie professionell Parkett verlegt wird',
-      category: 'Parkett',
+      category: 'Parkett (fiscgrad)',
       duration: '3:10',
       thumbnail: v1,
       videoUrl: 'https://vimeo.com/1122282331', 
@@ -410,7 +410,7 @@ const VideoSection = () => {
     {
       title: 'Vinyl Bodenbelag Installation',
       subtitle: 'Moderne Techniken für Vinyl-Verlegung',
-      category: 'Vinyl',
+      category: 'Parkett',
       duration: '0:21',
       thumbnail: v2,
       videoUrl: 'https://vimeo.com/1122284997',
@@ -418,7 +418,7 @@ const VideoSection = () => {
     {
       title: 'Keramikplatten Verlegung',
       subtitle: 'Präzise Arbeit mit Stein- und Keramikplatten',
-      category: 'Keramik',
+      category: 'Parkett',
       duration: '1:33',
       thumbnail: v3,
       videoUrl: 'https://vimeo.com/1122285770',
@@ -426,7 +426,7 @@ const VideoSection = () => {
     {
       title: 'Teppichverlegung im Büro',
       subtitle: 'Professionelle Teppichverlegung für Geschäftsräume',
-      category: 'Teppich',
+      category: 'Parkett',
       duration: '0.32',
       thumbnail: v4,
       videoUrl: 'https://vimeo.com/1122287917', 

@@ -193,16 +193,21 @@ const parkettMusterImages = [
 
 const beforeAfterImages = [
     import('@/assets/gallery/Before _After/1.jpg'),
-    import('@/assets/gallery/Before _After/2.jpg'),
     import('@/assets/gallery/Before _After/3.jpg'),
-    import('@/assets/gallery/Before _After/4.jpg'),
+    import('@/assets/gallery/Before _After/2.jpg'),
     import('@/assets/gallery/Before _After/5.jpg'),
-    import('@/assets/gallery/Before _After/6.jpg'),
-    import('@/assets/gallery/Before _After/7.jpg'),
-    import('@/assets/gallery/Before _After/8.jpg'),
+
+
+
     import('@/assets/gallery/Before _After/9.jpg'),
-    import('@/assets/gallery/Before _After/10.jpg'),
     import('@/assets/gallery/Before _After/11.jpg'),
+    import('@/assets/gallery/Before _After/7.jpg'),
+    import('@/assets/gallery/Before _After/6.jpg'),
+
+    import('@/assets/gallery/Before _After/8.jpg'),
+
+    import('@/assets/gallery/Before _After/10.jpg'),
+
 ];
 
 // Map linking titles to the dynamic import arrays

@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import GoogleReviewsSection from '@/components/GoogleReviewsSection'; // Pfad anpassen
+import { MarqueeDemo } from './Marquee';
 // ...
 
 const ContactSection = () => {
@@ -12,8 +13,26 @@ const ContactSection = () => {
     'Lokaler Service in der ganzen Region'
   ];
 
+  // The iframe code for the Google Map
+  const googleMapIframe = (
+    <div className="mt-12 mb-12 flex justify-center">
+      <div className="w-full max-w-4xl rounded-lg overflow-hidden shadow-xl">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.5494027501964!2d8.459531076711071!3d47.47920959676539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47907321b9e87563%3A0x63f5cb8e04eb4b39!2sFredy's%20Bodenbel%C3%A4ge!5e0!3m2!1sen!2slk!4v1759179340315!5m2!1sen!2slk"
+          width="100%" // Make it responsive
+          height="450"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Standort von Fredy's Bodenbeläge"
+        ></iframe>
+      </div>
+    </div>
+  );
+
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="mb-12 bg-0">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-primary">Kontaktieren Sie uns</h2>
@@ -60,7 +79,7 @@ const ContactSection = () => {
               <CardTitle className="text-xl text-primary">📍 Adresse</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground mb-2">Besuchen Sie uns</p>
+              <p className="text-muted-foreground mb-4">Besuchen Sie uns</p>
               <div className="space-y-1 text-sm mb-4">
                 <p>Pelzwiesenstrasse 12</p>
                 <p>8157 Dielsdorf</p>
@@ -124,37 +143,46 @@ const ContactSection = () => {
           </Card>
         </div>
 
-        <div className="container mx-auto px-4">
-          {/* Fredy's profile image and About text */}
+        <h3 className="text-3xl font-bold mb-5 text-center text-primary">* * * Google Map * * *</h3>
 
-          {/* Partnerships Section */}
-          <div className="mt-16">
-            {/* ... Partnerships content ... */}
-          </div>
+        {/* --- GOOGLE MAP HIER EINGEFÜGT (New Section) --- */}
+        {googleMapIframe}
+        {/* ----------------------------------------------- */}
 
-          {/* --- HERE YOU ADD THE NEW COMPONENT --- */}
-          <GoogleReviewsSection />
-          <br /><br />
-        </div>
 
-        <div className="max-w-2xl mx-auto">
-          <Card className="bg-card border-gold border-2">
-            <CardHeader className="text-center">
-              <CardTitle className="text-2xl text-primary">Warum Fredy's Bodenbeläge?</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <span className="text-gold text-xl">✓</span>
-                    <span className="text-primary font-medium">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+
+
+
+
+
       </div>
+
+      <div className="bg-white mb-12 py-12 ">
+
+
+        
+        <MarqueeDemo />
+        <br /><br />
+      </div>
+
+      <div className="max-w-2xl mx-auto mb-12 px-4">
+        <Card className="bg-card border-gold border-2">
+          <CardHeader className="text-center">
+            <CardTitle className="text-2xl text-primary">Warum Fredy's Bodenbeläge?</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <span className="text-gold text-xl">✓</span>
+                  <span className="text-primary font-medium">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
     </section>
   );
 };

@@ -96,6 +96,7 @@ All colors MUST be HSL.
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+  /* Marquee animation variables are now handled by Tailwind's animation utilities */
 }
 
 @layer base {
@@ -141,4 +142,78 @@ All colors MUST be HSL.
   .embla {
       padding: 0 20px; 
   }
+}
+/* ---break---
+*/
+/* Remove custom keyframes since they're now in Tailwind config */
+
+
+
+
+
+
+
+
+
+
+/*slider ******************************/
+
+/* Slider Container */
+.accordion-slider-container {
+    display: flex;
+    width: 100%;
+    max-width: 1100px; /* Adjust based on your layout */
+    margin: 30px auto;
+    height: 350px; 
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual Panel (Image) */
+.slider-panel {
+    flex-grow: 0.7; /* Default minimized size */
+    max-width: 10%; 
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.7s ease-in-out; /* Smooth transition */
+    
+    /* Content Styling */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+
+/* --- Key Accordion Effect --- */
+
+/* Expanded State */
+.slider-panel.active {
+    flex-grow: 15; /* Makes it much wider */
+    max-width: 70%; 
+}
+
+/* Content (heading) Styling */
+.panel-content {
+    opacity: 0;
+    transition: opacity 0.3s ease 0.4s; 
+}
+
+.slider-panel.active .panel-content {
+    opacity: 1; /* Show text when expanded */
+}
+
+/* Vertical Text for Minimized panels (Optional) */
+.slider-panel:not(.active) .panel-content {
+    transform: rotate(-90deg); 
+    transform-origin: 0% 0%; 
+    left: 20px;
+    bottom: 20px;
+    position: absolute;
 }
