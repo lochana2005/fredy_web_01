@@ -32,8 +32,8 @@ const Index = () => {
       <section id="instagram-reels" className="py-16 bg-muted/50 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 ">
-            <h2 className="text-4xl font-extrabold text-primary">Our Latest Reels</h2>
-            <p className="text-lg text-muted-foreground mt-2">Check out our recent videos directly from Instagram!</p>
+            <h2 className="text-4xl font-extrabold text-primary">Unsere neuesten Reels</h2>
+            <p className="text-lg text-muted-foreground mt-2">Sehen Sie sich unsere aktuellen Videos direkt auf Instagram an!</p>
           </div>
 
           {/* *** MODIFICATION HERE: Change lg:grid-cols-3 to lg:grid-cols-4 ***

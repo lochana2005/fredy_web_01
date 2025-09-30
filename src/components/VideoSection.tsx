@@ -402,7 +402,7 @@ const VideoSection = () => {
     {
       title: 'Parkettverlegung Schritt für Schritt',
       subtitle: 'Sehen Sie, wie professionell Parkett verlegt wird',
-      category: 'Parkett (fiscgrad)',
+      category: 'Fischgrätparkett',
       duration: '3:10',
       thumbnail: v1,
       videoUrl: 'https://vimeo.com/1122282331', 
@@ -410,7 +410,7 @@ const VideoSection = () => {
     {
       title: 'Vinyl Bodenbelag Installation',
       subtitle: 'Moderne Techniken für Vinyl-Verlegung',
-      category: 'Parkett',
+      category: 'Fischgrätparkett',
       duration: '0:21',
       thumbnail: v2,
       videoUrl: 'https://vimeo.com/1122284997',

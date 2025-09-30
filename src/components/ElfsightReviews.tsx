@@ -6,7 +6,8 @@ interface ElfsightReviewsProps {
 }
 
 const ElfsightReviews: React.FC<ElfsightReviewsProps> = ({ 
-  appId = 'c8b1d534-dbca-43c0-900a-359592294e5e',
+  // appId = 'c8b1d534-dbca-43c0-900a-359592294e5e',
+  appId = '3bb71364-1ea4-4db5-bc1a-e2bd68bf972e',
   className = ''
 }) => {
   const scriptLoaded = useRef(false);
@@ -26,9 +27,7 @@ const ElfsightReviews: React.FC<ElfsightReviewsProps> = ({
 
     // Cleanup function
     return () => {
-      // Note: We don't remove the script on unmount as it might be used by other instances
-      // If you need to remove it, uncomment the line below
-      // document.body.removeChild(script);
+    
     };
   }, []);
 
