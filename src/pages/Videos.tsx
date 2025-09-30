@@ -286,81 +286,71 @@ const Videos = () => {
 
   const allVideos = [
      {
-      title: 'Parkettverlegung Schritt für Schritt',
-      subtitle: 'Sehen Sie, wie professionell Parkett verlegt wird',
+
       category: 'Parkett (Fiscgrad)',
       duration: '03:10',
       thumbnail: v1,
       videoUrl: 'https://vimeo.com/1122282331', 
     },
     {
-      title: 'Vinyl Bodenbelag Installation',
-      subtitle: 'Moderne Techniken für Vinyl-Verlegung',
+
       category: 'Parkett',
       duration: '00:21',
       thumbnail: v2,
       videoUrl: 'https://vimeo.com/1122284997',
     },
     {
-      title: 'Keramikplatten Verlegung',
-      subtitle: 'Präzise Arbeit mit Stein- und Keramikplatten',
+
       category: 'Parkett',
       duration: '01:33',
       thumbnail: v3,
       videoUrl: 'https://vimeo.com/1122285770',
     },
     {
-      title: 'Teppichverlegung im Büro',
-      subtitle: 'Professionelle Teppichverlegung für Geschäftsräume',
+  
       category: 'Parkett',
       duration: '00.32',
       thumbnail: v4,
       videoUrl: 'https://vimeo.com/1122287917', 
     },
     {
-      title: 'Laminat Installation Tipps',
-      subtitle: 'Professionelle Techniken für perfekte Laminatverlegung',
+
       category: 'Parkett',
       duration: '00:08',
       thumbnail: v5,
       videoUrl: 'https://vimeo.com/1122292874',
     },
     {
-      title: 'Kork Bodenbelag Montage',
-      subtitle: 'Nachhaltige Lösungen mit natürlichem Kork',
+
       category: 'Vinyl',
       duration: '02:31',
       thumbnail: v6,
       videoUrl: 'https://vimeo.com/1122292938',
     },
     {
-      title: 'Linoleum Verarbeitung',
-      subtitle: 'Hochwertige Linoleum-Installation von A bis Z',
+     
       category: 'Vinyl',
       duration: '02:11',
       thumbnail: v7,
       videoUrl: 'https://vimeo.com/1122293348',
     },
     {
-      title: 'Abdichtungsarbeiten',
-      subtitle: 'Professionelle Silikon- und Abdichtungstechniken',
-      category: 'PVC ()',
+     
+      category: 'PVC (Industrie Belage)',
       duration: '00:11',
       thumbnail: v8,
       videoUrl: 'https://vimeo.com/1122294187',
     },
     {
-      title: 'Wandschutz Systeme',
-      subtitle: 'Innovative Lösungen für Wandschutz in Gewerberäumen',
-      category: 'Wandschutz',
+   
+      category: 'PVC (Industrie Belage)',
       duration: '00:16',
       thumbnail: v9,
       videoUrl: 'https://vimeo.com/1122294265',
     },
     {
-      title: 'Reparatur Techniken',
-      subtitle: 'Fachgerechte Reparatur von Bodenbelägen',
-      category: 'Reparatur',
+   
+      category: 'Teppich',
       duration: '00:15',
       thumbnail: v10,
       videoUrl: 'https://vimeo.com/1122294364',
@@ -408,7 +398,7 @@ const Videos = () => {
                 <div className="relative aspect-video overflow-hidden">
                   <img
                     src={video.thumbnail}
-                    alt={video.title}
+                 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
