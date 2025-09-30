@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import GoogleReviewsSection from '@/components/GoogleReviewsSection'; // Pfad anpassen
 import { MarqueeDemo } from './Marquee';
+import ElfsightReviews from './ElfsightReviews';
 // ...
 
 const ContactSection = () => {
@@ -148,23 +149,14 @@ const ContactSection = () => {
         {/* --- GOOGLE MAP HIER EINGEFÜGT (New Section) --- */}
         {googleMapIframe}
         {/* ----------------------------------------------- */}
-
-
-
-
-
-
-
-
-
-
       </div>
 
       <div className="bg-white mb-12 py-12 ">
 
 
         
-        <MarqueeDemo />
+        {/* <MarqueeDemo /> */}
+        <ElfsightReviews className="mb-12" />
         <br /><br />
       </div>
 
